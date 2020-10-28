@@ -1,0 +1,229 @@
+{
+    "author": {
+        "email": "adam.huszar@gmail.com",
+        "name": "adam huszar"
+    },
+    "description": {
+        "EN": "CAM job description goes here."
+    },
+    "output_type": "zip",
+    "outputs": [
+        {
+            "format_specifier": {
+                "decimal": 4,
+                "integer": 2
+            },
+            "output_type": "drill",
+            "outputs": [
+                {
+                    "drills": {
+                        "NPTH": true,
+                        "PTH": true,
+                        "VIA": true
+                    },
+                    "filename_format": "Gerbers/%N_Drill.drd",
+                    "layers": {
+                        "from": 1,
+                        "to": 16
+                    },
+                    "name": "Furatok",
+                    "type": "excellon"
+                }
+            ]
+        },
+        {
+            "filename_prefix": "outputs",
+            "format_specifier": {
+                "decimal": 4,
+                "integer": 3
+            },
+            "generate_job_file": false,
+            "output_type": "gerber",
+            "outputs": [
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Legend",
+                        "index": 1,
+                        "layer_type": "top"
+                    },
+                    "filename_format": "Gerbers/%N_Top_Silkscreen.plc",
+                    "layers": [
+                        25
+                    ],
+                    "milling": false,
+                    "name": "Alkatresz pozicionyomat",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Legend",
+                        "index": 1,
+                        "layer_type": "Bottom"
+                    },
+                    "filename_format": "Gerbers/%N_Bottom_Silkscreen.pls",
+                    "layers": [
+                        26
+                    ],
+                    "milling": false,
+                    "name": "Forrasztasi pozicionyomat",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Copper",
+                        "layer": 1,
+                        "layer_details": "mixed",
+                        "layer_type": "top"
+                    },
+                    "filename_format": "Gerbers/%N_Top_Copper.cmp",
+                    "layers": [
+                        1,
+                        17,
+                        18
+                    ],
+                    "milling": false,
+                    "name": "Alkatresz rez",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Copper",
+                        "layer": 16,
+                        "layer_details": "mixed",
+                        "layer_type": "Bottom"
+                    },
+                    "filename_format": "Gerbers/%N_Bottom_Copper.sol",
+                    "layers": [
+                        16,
+                        17,
+                        18
+                    ],
+                    "milling": false,
+                    "name": "Forrasztasi rez",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Soldermask",
+                        "layer_type": "top",
+                        "layers": [
+                        ],
+                        "polarity": "negative"
+                    },
+                    "filename_format": "Gerbers/%N_Top_Soldermask.stc",
+                    "layers": [
+                        29
+                    ],
+                    "milling": false,
+                    "name": "Alkatresz lotstop",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Soldermask",
+                        "layer_type": "Bottom",
+                        "layers": [
+                        ],
+                        "polarity": "negative"
+                    },
+                    "filename_format": "Gerbers/%N_Bottom_Soldermask.sts",
+                    "layers": [
+                        30
+                    ],
+                    "milling": false,
+                    "name": "Forrasztasi lotstop",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "file_function": "Profile",
+                        "plating": "non-plated"
+                    },
+                    "filename_format": "Gerbers/%N_Outline_Milling.mill",
+                    "layers": [
+                        20,
+                        46,
+                        47
+                    ],
+                    "milling": false,
+                    "name": "Korvonal es belso maras",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                }
+            ],
+            "version": "RS274X"
+        },
+        {
+            "filename_prefix": "CAMOutputs/DrawingFiles",
+            "output_type": "drawing",
+            "outputs": [
+            ]
+        }
+    ],
+    "timestamp": "2019-01-11T11:14:27",
+    "type": "EAGLE CAM job",
+    "units": "imperial",
+    "version": "8.6.1"
+}
